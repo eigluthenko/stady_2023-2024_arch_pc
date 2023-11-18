@@ -15,10 +15,10 @@ mov edx, 80 ; запись длины вводимого значения в edx
 call sread ; вызов подпрограммы ввода сообщения
 mov eax,x ; вызов подпрограммы преобразования
 call atoi ; ASCII кода в число, eax=x
-add eax,11; eax = eax+11 = x + 11
-mov ebx,2 ; запись значения 2 в регистр ebx
-mul ebx; EAX=EAX*EBX = (x+11)*2
-add eax,-6; eax = eax-6 = (x+11)*2-6
+add eax,1; eax = eax+1 = x + 1
+mov ebx,10 ; запись значения 10 в регистр ebx
+mul ebx; EAX=EAX*EBX = (x+1)*10
+add eax,-10; eax = eax-10 = (x+1)*10-10
 mov edi,eax ; запись результата вычисления в 'edi'
 ; ---- Вывод результата на экран
 mov eax,rem ; вызов подпрограммы печати
